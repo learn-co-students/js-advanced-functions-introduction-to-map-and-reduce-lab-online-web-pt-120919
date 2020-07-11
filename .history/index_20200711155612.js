@@ -34,8 +34,10 @@ function reduceToTotal(arr, total = 0) {
 }
 
 function reduceToAllTrue(arr) {
-  return arr.every(item => Boolean(item) === true)
-}
-function reduceToAnyTrue(arr) {
-  return arr.some(item => Boolean(item) === true)
+  arr.forEach(num => {
+    if (num === false) {
+      return false
+    }
+  })
+  return true
 }
