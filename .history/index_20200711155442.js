@@ -32,10 +32,3 @@ function reduceToTotal(arr, total = 0) {
   arr.forEach(num => total += num)
   return total
 }
-
-function reduceToAllTrue(arr) {
-  return arr.every(item => Boolean(item) === true)
-}
-function reduceToAnyTrue(arr) {
-  return arr.some(item => Boolean(item) === true)
-}
