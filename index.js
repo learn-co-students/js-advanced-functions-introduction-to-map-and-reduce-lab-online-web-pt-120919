@@ -80,7 +80,17 @@ const reduceToTotal = function(array, start=0) {
 }
 
 
-
+// Make this work !!!
+// const reduceToAllTrue = function(array) {
+//     let reducedTrue = array.reduce((acc, next) => {
+//         // console.log(!acc)
+//         console.log(acc)
+//         if (!next) {
+//           return false;
+//         };
+//     });
+//     return true;
+// }
 
 const reduceToAllTrue = function(array) {
     for (let i = 0; i < array.length; i++ ) {
