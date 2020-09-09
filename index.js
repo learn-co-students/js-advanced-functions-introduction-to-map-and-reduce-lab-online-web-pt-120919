@@ -1,9 +1,16 @@
 // Your code here
 function mapToNegativize(sourceArray) {
+    let answer = [];
     for(let i = 0; i < sourceArray.length; i++){
-        sourceArray[i] *= -1
+        answer.push(sourceArray[i] *= -1)
     }
-    return sourceArray
+    return answer
+
+    // for (let element of sourceArray){
+    //     answer.push(element *= -1 )
+    // }
+
+    // return sourceArray.map(a => a * -1)
 }
 
 function mapToNoChange(sourceArray) {
@@ -11,6 +18,8 @@ function mapToNoChange(sourceArray) {
         sourceArray[i] *= 1
     }
     return sourceArray
+
+    // return sourceArray.map(a => a)
 }
 
 function mapToDouble(sourceArray){
@@ -18,6 +27,8 @@ function mapToDouble(sourceArray){
         sourceArray[i] *= 2
     }
     return sourceArray
+
+    // return sourceArray.map(a => a * 2)
 }
 
 function mapToSquare(sourceArray) {
@@ -25,23 +36,28 @@ function mapToSquare(sourceArray) {
         sourceArray[i] = Math.pow(sourceArray[i],2)
     }
     return sourceArray
+
+    //return sourceArray.map(a => Math.pow(a,2))
 }
+
 
 function reduceToTotal(sourceArray, startingPoint){
-    if (!startingPoint){
-        let answer = 0;
-        for(let i = 0; i < sourceArray.length; i++){
-            answer += sourceArray[i]   
+        if (!startingPoint){
+            let answer = 0;
+            for(let i = 0; i < sourceArray.length; i++){
+                answer += sourceArray[i]   
+            }
+        return answer
         }
-    return answer
-    }
-
-    for(let i = 0; i < sourceArray.length; i++){
-        startingPoint += sourceArray[i] 
-    }
-    return startingPoint
+    
+        for(let i = 0; i < sourceArray.length; i++){
+            startingPoint += sourceArray[i] 
+        }
+        return startingPoint
 }
-
+// return answer.reduce((accumulator, wage) => {
+//     return wage + accumulator
+// }, 0)
 
 function reduceToAllTrue(sourceArray) {
     for(let i of sourceArray){
